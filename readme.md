@@ -149,6 +149,12 @@ vm.$documentForceUpdate(document)
 console.log(document.documentElement.outerHTML)
 ```
 
+### Caveats
+
+#### Setting Document Title when using a Router
+
+When using the title injector and a router like Vue Router, you have to set a default title for you app. This means applying the `document.head.title` property to your top level Vue element. If do not set a default title, when the user navigates to a page that does not specify a title, the title will be set to "Untitled".
+
 ## License
 
 [MIT](https://opensource.org/licenses/mit-license.php)
